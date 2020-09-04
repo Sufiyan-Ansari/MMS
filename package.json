@@ -23,9 +23,13 @@
     "env": "0.0.2",
     "exceljs": "^4.1.1",
     "express": "^4.17.1",
-    "mongoose": "^5.10.2",
+    "mongoose": "^5.10.3",
+    "node-gyp": "^3.6.1",
     "nodemon": "^2.0.4",
     "read-excel-file": "^4.0.7",
     "xlsx": "^0.16.6"
+  },
+  "devDependencies": {
+    "jdk": "0.0.0"
   }
 }
