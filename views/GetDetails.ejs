@@ -3,28 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Details :: </title>
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+      
+     <!-- <script src="/script.js"></script> -->
+       
+    <title></title>
 </head>
 <body>
     <h2>Details :: </h2>
-    <form action="/getDetails" method="POST">
-    <table>
-        <tr>
-            <td>Block No</td>
-            <td><input type="text" name="block"></td>
-        </tr>
-        <tr>
-            <td>Flat No</td>
-            <td><input type="text" name="flatNo"></td>
-        </tr>
-        <tr>
-            <td><input type="submit"></td>
-            <td></td>
-        </tr>
-    </table>
 
+    <form method="POST" >
+        <table>
+            <tr>
+                <td><label for="blockNo">Block No</label></td>
+                <td><input type="text" name="block" id="block"></td>
+            </tr>
+            
+            
+            <tr>
 
-    </form>
+                <td><label for="flatNo">Flat No</label></td>
+                <td><input type="text" name="flatNo" id="flatno"></td>
+            </tr>
+        
+        
+            <tr>
+                <td><button id="main-button">Submit</button></td>
+                <td> <label  id="status"></label></td>
+            </tr>
+            
+            
+            
+           
+       
+        </table>
+
+        </form>
+ 
 
 </body>
 </html>
