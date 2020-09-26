@@ -2,12 +2,20 @@ const { urlencoded } = require('body-parser');
 const mongoose = require('mongoose');
 const User = require("../model/user");
 const bcrypt = require('bcrypt');
+const passport = require('passport');
 exports.getRegisterController = (req,res,next)=>
 {
     res.render('Register');
 }
 exports.PostRegisterController = (req,res,next)=>
 {
+
+    passport.authenticate('local',{
+        successRedirect : '/dashboard',
+        failureRedirect : '/login',
+        failureFlash : true,
+        })(req,res,next);
+    
 
     const {name,email, password, password2} = req.body;
     let errors = [];
@@ -58,7 +66,8 @@ exports.PostRegisterController = (req,res,next)=>
                         //save user
                         newUser.save()
                         .then((value)=>{
-                            console.log(value)
+                            console.log(value);
+                            req.flash('success_msg','You have now registered!')
                         res.redirect('/login');
                         })
                         .catch(value=> console.log(value));
